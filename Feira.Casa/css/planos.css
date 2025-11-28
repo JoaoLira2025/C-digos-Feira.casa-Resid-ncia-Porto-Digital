@@ -1,0 +1,190 @@
+/* RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff; /* Fundo branco puro */
+        background: linear-gradient(135deg, #dfd2d2 0%, #ffeb35 100%);
+
+    color: #333;
+    padding: 40px 20px;
+}
+
+
+
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* LOGO E TÍTULOS */
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.slogan {
+    font-size: 16px;
+    color: #4CAF50; /* Cor verde para o slogan */
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* TÍTULO PRINCIPAL */
+.main-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.title-red {
+    color: #FF5733; /* Vermelho/Laranja para 'Planos e' */
+}
+
+.title-green {
+    color: #4CAF50; /* Verde para 'Preços' */
+}
+
+/* SEÇÃO DOS CARTÕES */
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap; /* Permite quebras em telas menores */
+}
+
+.card {
+    flex-basis: 250px; /* Largura base para o cartão */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 500px; /* Aumentei a altura mínima */
+    border-radius: 20px;
+    color: #fff;
+    padding: 25px 0 15px; /* Padding interno */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    flex-grow: 1; /* Garante que o conteúdo ocupe o espaço para empurrar o botão para baixo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px; /* Espaçamento do topo */
+}
+
+.plan-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.plan-price {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.plan-description  {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.85;
+    line-height: 1.5;
+    padding: 0 15px;
+
+}
+.plan-description ul li  {
+    font-size: 10px;
+    font-weight: 700;
+    opacity: 0.85;
+    line-height: 1.5;
+    padding: 0 15px;
+    margin-top: 1px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: left;
+}
+/* BOTÕES DE CONTRATAR */
+.btn {
+    width: 80%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* GRADIENTES E ESTILOS ESPECÍFICOS DOS CARTÕES */
+
+/* 1. PLANO ESSENCIAL (Verde para Amarelo) */
+.card-essential {
+    background: linear-gradient(to bottom, #72C54D, #FFC107);
+}
+
+.btn-essential {
+    background-color: #4CAF50; /* Verde escuro */
+    color: #fff;
+}
+
+/* 2. PLANO AVANÇADO (Amarelo para Laranja) */
+.card-advanced {
+    background: linear-gradient(to bottom, #FFC107, #FF9800);
+}
+
+.btn-advanced {
+    background-color: #FF9800; /* Laranja */
+    color: #fff;
+}
+
+/* 3. PLANO PREMIUM (Magenta/Verde para Laranja) - O mais complexo */
+.card-premium {
+    /* Múltiplos pontos de cor para simular a transição */
+    background: linear-gradient(to bottom, 
+        #E91E63 0%, /* Magenta */
+        #FFEB3B 50%, /* Amarelo/Verde (Meio) */
+        #FF5722 100% /* Laranja Escuro (Fundo) */
+    );
+}
+
+.btn-premium {
+    background: linear-gradient(to bottom, #FF5722, #FF9800); /* Gradiente no botão */
+    color: #fff;
+    /* Ajuste para imitar a cor de destaque do botão Premium (Laranja avermelhado) */
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 800px) {
+    .pricing-cards {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 28px;
+    }
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+        max-width: 300px; /* Limita a largura para mobile */
+    }
+}
