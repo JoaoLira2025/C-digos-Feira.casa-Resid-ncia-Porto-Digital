@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feira.casa Hortifruti - Clone</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-top">
+            <a href="home.html">
+                <img src="imgs/Container.png" alt="Logo Feira.casa" class="logo">
+            </a>
+            
+            <nav class="main-nav">
+                <div class="nav-item dropdown">
+                    <button class="dropdown-btn">
+                        Serviços <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item"><a href="cadastroprodutos.html" style="text-decoration:none; color:inherit;">Cadastro de Produtos</a></div>
+                        <div class="dropdown-item"><a href="cadastrovendedores.html" style="text-decoration:none; color:inherit;">Cadastro de Feirantes</a></div>
+                    </div>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="planos.html" class="dropdown-btn" style="text-decoration: none; color: inherit;">
+                        Planos
+                    </a>
+                </div>
+            </nav>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar no feira.casa">
+                <button class="search-btn">🔍</button>
+            </div>
+            
+            <div class="user-actions">
+                <span class="location">📍 Entregar em São Paulo, SP</span>
+                
+                <div class="nav-item dropdown">
+                    <button class="dropdown-btn user-dropdown-btn" id="userDropdownBtn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="dropdown-menu user-dropdown-menu">
+                        <div class="dropdown-item" id="loginOption">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <a href="login.html">Fazer Login</a>
+                        </div>
+                        <div class="dropdown-item" id="cadastroOption">
+                            <i class="fas fa-user-plus"></i>
+                            <a href="cadastro.html">Criar Conta</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="carrinho.html">
+                    <span class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="header-banner">
+            <img src="imgs/mana mãe de todos.jpg" alt="Oferta de tomates com até 80% OFF" class="full-width-img">
+        </div>
+    </header>
+
+   <main>
+        <!-- Seção Preço Verde - Exatamente como na imagem -->
+        <section class="price-green-section">
+            <div class="section-header">
+                <h2 class="section-title">Preço Verde</h2>
+            </div>
+
+            <div class="products-grid exact-layout">
+                <!-- Produto 1 - Uva Vitória -->
+                <div class="product-card-exact">
+                    <div class="product-image-exact">
+                        <!-- IMAGEM: Coloque aqui a imagem da Uva Vitória -->
+                        <img src="imgs/Uva.png" alt="Uva Vitória">
+                    </div>
+                    <div class="product-info-exact">
+                        <h3 class="product-name-exact">Uva Vitória 500g</h3>
+                        <div class="price-container-exact">
+                            <span class="current-price-exact">R$ 7,69</span>
+                            <span class="original-price-exact">R$ 14,99</span>
+                        </div>
+                        <button class="add-to-cart-exact" data-product='{"id":1,"name":"Uva Vitória 500g","price":7.69,"category":"Frutas","image":"imgs/Uva.png"}'>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 2 - Alcatra -->
+                <div class="product-card-exact">
+                    <div class="product-image-exact">
+                        <!-- IMAGEM: Coloque aqui a imagem do Miolo de Alcatra -->
+                        <img src="imgs/miolo de alcatra.jpg" alt="Miolo De Alcatra">
+                    </div>
+                    <div class="product-info-exact">
+                        <h3 class="product-name-exact">Miolo De Alcatra Bovina Kg</h3>
+                        <div class="price-container-exact">
+                            <span class="current-price-exact">R$ 49,99/kg</span>
+                            <span class="original-price-exact">R$ 60,90/kg</span>
+                        </div>
+                        <div class="unit-info-exact">1 un / ~1.8kg</div>
+                        <button class="add-to-cart-exact" data-product='{"id":2,"name":"Miolo De Alcatra Bovina Kg","price":49.99,"category":"Carnes","image":"imgs/miolo de alcatra.jpg"}'>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 3 - Azeite -->
+                <div class="product-card-exact">
+                    <div class="product-image-exact">
+                        <!-- IMAGEM: Coloque aqui a imagem do Azeite -->
+                        <img src="imgs/Azeite mediterraneo.jpg" alt="Azeite Extravirgem">
+                    </div>
+                    <div class="product-info-exact">
+                        <h3 class="product-name-exact">Azeite Extravirgem Mediterrâneo</h3>
+                        <div class="price-container-exact">
+                            <span class="current-price-exact">R$ 29,99</span>
+                            <span class="original-price-exact">R$ 50,99</span>
+                        </div>
+                        <button class="add-to-cart-exact" data-product='{"id":3,"name":"Azeite Extravirgem Mediterrâneo","price":29.99,"category":"Condimentos","image":"imgs/Azeite mediterraneo.jpg"}'>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 4 - Mozzarella -->
+                <div class="product-card-exact">
+                    <div class="product-image-exact">
+                        <!-- IMAGEM: Coloque aqui a imagem da Mozzarella -->
+                        <img src="imgs/Queijo Búfalo.jpg" alt="Mozzarella de Búfala">
+                    </div>
+                    <div class="product-info-exact">
+                        <h3 class="product-name-exact">Mozzarella de Búfala</h3>
+                        <div class="price-container-exact">
+                            <span class="current-price-exact">R$ 16,99</span>
+                            <span class="original-price-exact">R$ 10,99</span>
+                        </div>
+                        <button class="add-to-cart-exact" data-product='{"id":4,"name":"Mozzarella de Búfala","price":16.99,"category":"Laticínios","image":"imgs/Queijo Búfalo.jpg"}'>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Hortifruti - Exatamente como na imagem -->
+        <section class="hortifruti-section-exact">
+            <div class="section-header">
+                <h2 class="section-title">Ofertas especiais em hortifruti</h2>
+            </div>
+
+            <div class="products-grid exact-layout">
+                <!-- Produto 5 - Banana -->
+                <div class="product-card-exact">
+                    <div class="product-image-exact">
+                        <!-- IMAGEM: Coloque aqui a imagem da Banana -->
+                        <img src="imgs/banana prata 600g.jpg" alt="Banana Prata Orgânica">
+                    </div>
+                    <div class="product-info-exact">
+                        <h3 class="product-name-exact">Banana Prata Orgânica 600g</h3>
+                        <div class="price-container-exact">
+                            <span class="current-price-exact">R$ 11,99</span>
+                        </div>
+                        <button class="add-to-cart-exact" data-product='{"id":5,"name":"Banana Prata Orgânica 600g","price":11.99,"category":"Frutas","image":"imgs/banana prata 600g.jpg"}'>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 6 - Alho Roxo -->
+                <div class="product-card-exact">
+                    <div class="product-image-exact">
+                        <!-- IMAGEM: Coloque aqui a imagem do Alho Roxo -->
+                        <img src="imgs/Alho roxo.jpg" alt="Alho Roxo">
+                    </div>
+                    <div class="product-info-exact">
+                        <h3 class="product-name-exact">Alho Roxo Kg</h3>
+                        <div class="price-container-exact">
+                            <span class="current-price-exact">R$ 49,90/kg</span>
+                            <span class="original-price-exact">R$ 59,00/kg</span>
+                        </div>
+                        <div class="unit-info-exact">1 un / Aprox. 70g</div>
+                        <button class="add-to-cart-exact" data-product='{"id":6,"name":"Alho Roxo Kg","price":49.90,"category":"Temperos","image":"imgs/Alho roxo.jpg"}'>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 7 - Alho Poró -->
+                <div class="product-card-exact">
+                    <div class="product-image-exact">
+                        <!-- IMAGEM: Coloque aqui a imagem do Alho Poró -->
+                        <img src="imgs/alho poro.jpg" alt="Alho Poró">
+                    </div>
+                    <div class="product-info-exact">
+                        <h3 class="product-name-exact">Alho Poró Unidade</h3>
+                        <div class="price-container-exact">
+                            <span class="current-price-exact">R$ 4,99</span>
+                            <span class="original-price-exact">R$ 5,98</span>
+                        </div>
+                        <button class="add-to-cart-exact" data-product='{"id":7,"name":"Alho Poró Unidade","price":4.99,"category":"Verduras","image":"imgs/alho poro.jpg"}'>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 8 - Maçã Palmer -->
+                <div class="product-card-exact">
+                    <div class="product-image-exact">
+                        <!-- IMAGEM: Coloque aqui a imagem da Maçã Palmer -->
+                        <img src="imgs/maça palmer picada.jpg" alt="Maçã Palmer">
+                    </div>
+                    <div class="product-info-exact">
+                        <h3 class="product-name-exact">Maçã Palmer Cortada</h3>
+                        <div class="price-container-exact">
+                            <span class="current-price-exact">R$ 19,99/kg</span>
+                            <span class="original-price-exact">R$ 20,99/kg</span>
+                        </div>
+                        <div class="unit-info-exact">1 un / Aprox. 917g</div>
+                        <button class="add-to-cart-exact" data-product='{"id":8,"name":"Maçã Palmer Cortada","price":19.99,"category":"Frutas","image":"imgs/maça palmer picada.jpg"}'>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 9 - Abobrinha -->
+                <div class="product-card-exact">
+                    <div class="product-image-exact">
+                        <!-- IMAGEM: Coloque aqui a imagem da Abobrinha -->
+                        <img src="imgs/abrobrinha.jpg" alt="Abobrinha Italiana">
+                    </div>
+                    <div class="product-info-exact">
+                        <h3 class="product-name-exact">Abobrinha Italiana Orgânica 600g</h3>
+                        <div class="price-container-exact">
+                            <span class="current-price-exact">R$ 9,99</span>
+                            <span class="original-price-exact">R$ 14,99</span>
+                        </div>
+                        <button class="add-to-cart-exact" data-product='{"id":9,"name":"Abobrinha Italiana Orgânica 600g","price":9.99,"category":"Legumes","image":"imgs/abrobrinha.jpg"}'>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 10 - Brócolis -->
+                <div class="product-card-exact">
+                    <div class="product-image-exact">
+                        <!-- IMAGEM: Coloque aqui a imagem do Brócolis -->
+                        <img src="imgs/Bróclolis.jpg" alt="Brócolis Ninja">
+                    </div>
+                    <div class="product-info-exact">
+                        <h3 class="product-name-exact">Brócolis Ninja 250g</h3>
+                        <div class="price-container-exact">
+                            <span class="current-price-exact">R$ 5,99</span>
+                            <span class="original-price-exact">R$ 6,99</span>
+                        </div>
+                        <button class="add-to-cart-exact" data-product='{"id":10,"name":"Brócolis Ninja 250g","price":5.99,"category":"Verduras","image":"imgs/Bróclolis.jpg"}'>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card-exact">
+                    <div class="product-image-exact">
+                        <!-- IMAGEM: Coloque aqui a imagem do Brócolis -->
+                        <img src="imgs/laranjas org.jpg" alt="Laranjas Orgânicas">
+                    </div>
+                    <div class="product-info-exact">
+                        <h3 class="product-name-exact">Laranjas Orgânicas</h3>
+                        <div class="price-container-exact">
+                            <span class="current-price-exact">R$ 5,99</span>
+                            <span class="original-price-exact">R$ 6,99</span>
+                        </div>
+                        <button class="add-to-cart-exact" data-product='{"id":11,"name":"Laranjas Orgânica 250g","price":5.99,"category":"Frutas","image":"imgs/laranja.jpeg"}'>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card-exact">
+                    <div class="product-image-exact">
+                        <!-- IMAGEM: Coloque aqui a imagem do Brócolis -->
+                        <img src="imgs/ameixas.jpg" alt="Ameixas 200g">
+                    </div>
+                    <div class="product-info-exact">
+                        <h3 class="product-name-exact">Ameixas 200g</h3>
+                        <div class="price-container-exact">
+                            <span class="current-price-exact">R$ 5,99</span>
+                            <span class="original-price-exact">R$ 6,99</span>
+                        </div>
+                        <button class="add-to-cart-exact" data-product='{"id":12,"name":"Ameixas 200g","price":5.99,"category":"Frutas","image":"imgs/ameixas.jpg"}'>
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </section>
+    </main>
+
+
+   <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Feira.casa</h3>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Nossas Lojas</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ajuda</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Entregas</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="#">(11) 9999-9999</a></li>
+                    <li><a href="#">contato@feira.casa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Feira.casa - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS: carregando os arquivos JS corretos na pasta `javascript/` -->
+    <script src="javascript/home.js"></script>
+    <script src="javascript/carrinho.js"></script>
+</body>
+</html>
