@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos - Clone</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/cadastroprodutos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-top">
+            <a href="home.html">
+                <img src="imgs/Container.png" alt="Logo Feira.casa" class="logo">
+            </a>
+            
+            <nav class="main-nav">
+                <div class="nav-item dropdown">
+                    <button class="dropdown-btn">
+                        Serviços <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item"><a href="cadastroprodutos.html" style="text-decoration:none; color:inherit;">Cadastro de Produtos</a></div>
+                        <div class="dropdown-item"><a href="cadastrovendedores.html" style="text-decoration:none; color:inherit;">Cadastro de Feirantes</a></div>
+                    </div>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="planos.html" class="dropdown-btn" style="text-decoration: none; color: inherit;">
+                        Planos
+                    </a>
+                </div>
+            </nav>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar no feira.casa">
+                <button class="search-btn">🔍</button>
+            </div>
+            
+            <div class="user-actions">
+                <span class="location">📍 Entregar em São Paulo, SP</span>
+                
+                <div class="nav-item dropdown">
+                    <button class="dropdown-btn user-dropdown-btn" id="userDropdownBtn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="dropdown-menu user-dropdown-menu">
+                        <div class="dropdown-item" id="loginOption">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <a href="login.html">Fazer Login</a>
+                        </div>
+                        <div class="dropdown-item" id="cadastroOption">
+                            <i class="fas fa-user-plus"></i>
+                            <a href="cadastro.html">Criar Conta</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="carrinho.html">
+                    <span class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="logo-container">
+            <img src="imgs/simbolo Feira.png" alt="Logo" class="logo">
+        </div>
+
+        <h1 class="page-title">Cadastro de Produtos</h1>
+
+        <div class="input-group">
+            <label for="product-name">Nome</label>
+            <input type="text" id="product-name" class="full-width-input">
+        </div>
+
+        <div class="input-group permalink-group">
+            <label>Link permanente:</label>
+            <span class="permalink-url">www.linkdoprodutoXYZ.com.br</span>
+        </div>
+
+        <div class="meta-box-row top-row">
+            
+            <div class="meta-box text-editor-box">
+                <div class="editor-header">
+                    <span class="header-link">Adicionar mídia</span>
+                    <div class="toolbar">
+                        <span class="tool-btn active">Parágrafo</span>
+                        <span class="tool-btn">B</span>
+                        <span class="tool-btn">I</span>
+                        <span class="tool-btn">✓</span>
+                        <span class="tool-btn">...</span>
+                    </div>
+                </div>
+                <div class="editor-content">
+                    <textarea class="description-text" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...">
+
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="meta-box product-data-box">
+                <div class="box-header">
+                    <span>Dados do produto</span>
+                    <span class="header-link">Gerenciar Variações</span>
+                </div>
+                <div class="box-content">
+                    
+                    <div class="data-field-group">
+                        <label>SKU:</label>
+                        <input type="text" class="small-input" placeholder="COD_PROD">
+                    </div>
+                    
+                    <div class="data-field-group">
+                        <label>GTIN:</label>
+                        <input type="text" class="small-input">
+                    </div>
+
+                    <div class="data-field-group">
+                        <label>Controle de estoque:</label>
+                        <input type="checkbox" id="control-stock">
+                    </div>
+
+                    <div class="data-field-group">
+                        <label>Estoque (un):</label>
+                        <input type="number" class="small-input" value="100">
+                    </div>
+
+                    <div class="data-field-group">
+                        <label>Vender individualmente:</label>
+                        <input type="checkbox" id="sell-individually">
+                    </div>
+
+                    <div class="data-field-group">
+                        <label>Vendedor:</label>
+                        <select class="small-input">
+                            <option>Selecione um...</option>
+                        </select>
+                    </div>
+
+                    <div class="vendor-box">
+                        <p>Outro vendedor disponível</p>
+                        <p class="vendor-description">Você pode selecionar um outro vendedor</p>
+                        <select class="small-input">
+                            <option>Selecione um...</option>
+                        </select>
+                        <a href="#" class="add-vendor-link">+ Adicionar novo vendedor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="meta-box-row bottom-row">
+            
+            <div class="meta-box product-details-box">
+                <div class="box-header">
+                    <span>Dados do produto</span>
+                </div>
+                <div class="box-content details-grid">
+                    <div class="data-field-group">
+                        <label>Tipo</label>
+                        <input type="text">
+                    </div>
+                    <div class="data-field-group">
+                        <label>MFG</label>
+                        <input type="text">
+                    </div>
+                    <div class="data-field-group">
+                        <label>Vida</label>
+                        <input type="text">
+                    </div>
+                    <div class="data-field-group">
+                        <label>Tipo de crachá</label>
+                        <input type="text">
+                    </div>
+                    <div class="data-field-group">
+                        <label>Crachá se em promoção</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="meta-box product-image-box">
+                <div class="box-header">
+                    <span>Imagem do produto</span>
+                </div>
+                <div class="box-content image-content">
+                    <div class="image-preview">
+                        <img src="imgs/cajus.png" alt="Imagem do Produto" class="product-image">
+                    </div>
+                    <p class="image-text">Gerenciar imagem</p>
+                    <p class="image-text-small">Clique sobre a imagem para edita la</p>
+                </div>
+            </div>
+
+            <div class="meta-box product-tag-box">
+                <div class="box-header">
+                    <span>Tag de produto</span>
+                </div>
+                <div class="box-content tag-content">
+                    <input type="text" class="tag-input">
+                    <button class="add-tag-btn">Adicionar</button>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </main>
+
+    <script src="javascript/home.js"></script>
+    <script src="javascript/carrinho.js"></script>
+</body>
+</html>
